@@ -1,100 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20200108 23:27:53.851" rpa="false">
-<suite id="s1" name="TestMultpleBrowsers" source="C:\Users\Himen\PycharmProjects\TestAutomation\TabbedWindowCases\TestMultpleBrowsers.robot">
-<test id="s1-t1" name="Test Multiple Browser Cases">
+<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20200109 00:12:21.782" rpa="false">
+<suite id="s1" name="NavigateBrowserTabs" source="C:\Users\Himen\PycharmProjects\TestAutomation\NavigationTestCases\NavigateBrowserTabs.robot">
+<test id="s1-t1" name="Navigation Test">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>https://www.google.co.in/</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20200108 23:27:54.614" level="INFO">Opening browser 'chrome' to base url 'https://www.google.co.in/'.</msg>
-<status status="PASS" starttime="20200108 23:27:54.613" endtime="20200108 23:28:02.247"></status>
+<msg timestamp="20200109 00:12:22.510" level="INFO">Opening browser 'chrome' to base url 'https://www.google.co.in/'.</msg>
+<status status="PASS" starttime="20200109 00:12:22.509" endtime="20200109 00:12:30.644"></status>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200108 23:28:02.248" endtime="20200108 23:28:03.378"></status>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${loc1}</var>
+</assign>
+<msg timestamp="20200109 00:12:30.684" level="INFO">${loc1} = https://www.google.co.in/</msg>
+<status status="PASS" starttime="20200109 00:12:30.645" endtime="20200109 00:12:30.685"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${loc1}</arg>
+</arguments>
+<status status="PASS" starttime="20200109 00:12:30.687" endtime="20200109 00:12:30.689"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3</arg>
 </arguments>
-<msg timestamp="20200108 23:28:06.380" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200108 23:28:03.378" endtime="20200108 23:28:06.380"></status>
+<msg timestamp="20200109 00:12:33.692" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200109 00:12:30.691" endtime="20200109 00:12:33.692"></status>
 </kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>https://www.bing.com/</arg>
-<arg>chrome</arg>
 </arguments>
-<msg timestamp="20200108 23:28:06.381" level="INFO">Opening browser 'chrome' to base url 'https://www.bing.com/'.</msg>
-<status status="PASS" starttime="20200108 23:28:06.381" endtime="20200108 23:28:13.742"></status>
+<msg timestamp="20200109 00:12:33.695" level="INFO">Opening url 'https://www.bing.com/'</msg>
+<status status="PASS" starttime="20200109 00:12:33.694" endtime="20200109 00:12:34.951"></status>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200108 23:28:13.743" endtime="20200108 23:28:14.895"></status>
-</kw>
-<kw name="Switch Browser" library="SeleniumLibrary">
-<doc>Switches between active browsers using ``index_or_alias``.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<status status="PASS" starttime="20200108 23:28:14.896" endtime="20200108 23:28:14.897"></status>
-</kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<doc>Returns the title of the current page.</doc>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
 <assign>
-<var>${title1}</var>
+<var>${loc2}</var>
 </assign>
-<msg timestamp="20200108 23:28:14.906" level="INFO">${title1} = Google</msg>
-<status status="PASS" starttime="20200108 23:28:14.897" endtime="20200108 23:28:14.906"></status>
+<msg timestamp="20200109 00:12:34.978" level="INFO">${loc2} = https://www.bing.com/</msg>
+<status status="PASS" starttime="20200109 00:12:34.953" endtime="20200109 00:12:34.978"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>${title1}</arg>
+<arg>${loc2}</arg>
 </arguments>
-<status status="PASS" starttime="20200108 23:28:14.907" endtime="20200108 23:28:14.908"></status>
-</kw>
-<kw name="Switch Browser" library="SeleniumLibrary">
-<doc>Switches between active browsers using ``index_or_alias``.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<status status="PASS" starttime="20200108 23:28:14.908" endtime="20200108 23:28:14.909"></status>
-</kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<doc>Returns the title of the current page.</doc>
-<assign>
-<var>${title2}</var>
-</assign>
-<msg timestamp="20200108 23:28:25.539" level="INFO">${title2} = Bing</msg>
-<status status="PASS" starttime="20200108 23:28:14.910" endtime="20200108 23:28:25.540"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${title2}</arg>
-</arguments>
-<status status="PASS" starttime="20200108 23:28:25.541" endtime="20200108 23:28:25.543"></status>
+<status status="PASS" starttime="20200109 00:12:34.980" endtime="20200109 00:12:34.983"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3</arg>
 </arguments>
-<msg timestamp="20200108 23:28:28.547" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200108 23:28:25.546" endtime="20200108 23:28:28.547"></status>
+<msg timestamp="20200109 00:12:37.988" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200109 00:12:34.986" endtime="20200109 00:12:37.988"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200109 00:12:37.989" endtime="20200109 00:12:43.090"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${loc3}</var>
+</assign>
+<msg timestamp="20200109 00:12:43.122" level="INFO">${loc3} = data:,</msg>
+<status status="PASS" starttime="20200109 00:12:43.103" endtime="20200109 00:12:43.122"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${loc3}</arg>
+</arguments>
+<status status="PASS" starttime="20200109 00:12:43.126" endtime="20200109 00:12:43.127"></status>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20200108 23:28:28.548" endtime="20200108 23:28:34.860"></status>
+<status status="PASS" starttime="20200109 00:12:43.131" endtime="20200109 00:12:46.242"></status>
 </kw>
-<status status="PASS" starttime="20200108 23:27:54.610" endtime="20200108 23:28:34.861" critical="yes"></status>
+<status status="PASS" starttime="20200109 00:12:22.506" endtime="20200109 00:12:46.244" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200108 23:27:53.868" endtime="20200108 23:28:34.868"></status>
+<status status="PASS" starttime="20200109 00:12:21.787" endtime="20200109 00:12:46.251"></status>
 </suite>
 <statistics>
 <total>
@@ -104,7 +100,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="TestMultpleBrowsers">TestMultpleBrowsers</stat>
+<stat pass="1" fail="0" id="s1" name="NavigateBrowserTabs">NavigateBrowserTabs</stat>
 </suite>
 </statistics>
 <errors>
