@@ -21,5 +21,4 @@ Mouse Events Test cases
     drag and drop   id:box6     id:box106
     sleep   5
 
-
     close browser

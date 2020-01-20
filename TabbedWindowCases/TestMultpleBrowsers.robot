@@ -21,5 +21,3 @@ Test Multiple Browser Cases
 
     sleep  3
     close all browsers
-
-
